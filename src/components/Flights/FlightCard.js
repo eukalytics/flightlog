@@ -1,5 +1,5 @@
 import FlightDate from "./FlightDate"
-export default function Flight({ pilot, craft, date, notes }) {
+export default function FlightCard({ pilot, craft, date, notes }) {
     return (
         <div className="bg-gray-700 m-4 p-4 grid grid-cols-10 rounded">
             <FlightDate date={date} />

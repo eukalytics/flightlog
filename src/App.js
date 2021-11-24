@@ -1,6 +1,6 @@
-import FlightList from "./components/FlightList";
+import FlightList from "./components/Flights/FlightList";
 
-function App() {
+export default function App() {
   const flights = [ 
     {id: "f1", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 24), notes: "Flew to the next galaxy."},
     {id: "f1", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 23), notes: "Flew to the next galaxy."},
@@ -13,5 +13,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

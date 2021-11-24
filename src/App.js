@@ -8,7 +8,7 @@ export default function App() {
     {if: "f4", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 21), notes: "Flew to the next galaxy."}
   ]
   return (
-    <div>
+    <div className="bg-gray-800 min-h-screen p-20">
       <FlightList flights={flights} />
     </div>
   );

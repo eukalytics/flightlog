@@ -2,8 +2,8 @@ import Flight from "./Flight";
 
 export default function FlightList({flights}) {
     return (
-        <div>
-            <h2>Flights</h2>
+        <div className="bg-gray-900 p-5 rounded">
+            <h2 className="text-gray-200 text-3xl font-semibold text-center">Flight Log</h2>
             <Flight 
               pilot={flights[0].pilot}
               craft={flights[0].craft}

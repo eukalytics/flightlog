@@ -1,7 +1,15 @@
+import FlightList from "./components/FlightList";
+
 function App() {
+  const flights = [ 
+    {id: "f1", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 24), notes: "Flew to the next galaxy."},
+    {id: "f1", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 23), notes: "Flew to the next galaxy."},
+    {id: "f3", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 22), notes: "Flew to the next galaxy."},
+    {if: "f4", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 21), notes: "Flew to the next galaxy."}
+  ]
   return (
     <div>
-      <h2>Koalas are Bears</h2>
+      <FlightList flights={flights} />
     </div>
   );
 }

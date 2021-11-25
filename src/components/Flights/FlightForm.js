@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function FlightForm() {
+export default function FlightForm({ handleNewFlightSubmit }) {
     const [newFlight, setNewFlight] = useState({
         title: '',
         craft: '',
@@ -45,7 +45,7 @@ export default function FlightForm() {
             ...newFlight, 
             date: new Date(newFlight.date)
         };
-        console.log(submittedFlight);
+        handleNewFlightSubmit(submittedFlight)
         setNewFlight({
             title: '',
             craft: '',

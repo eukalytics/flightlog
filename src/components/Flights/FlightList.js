@@ -1,4 +1,5 @@
 import FlightCard from "./FlightCard";
+import ErrorCard from "./ErrorCard";
 import FlightForm from "./FlightForm";
 import FlightFilter from "./FlightFilter";
 
@@ -20,15 +21,19 @@ export default function FlightList({flights, handleAddFlight, filterYear, handle
         <h2 className="text-gray-200 text-3xl font-semibold text-center">Flight Log</h2>
         <FlightForm handleNewFlightSubmit={handleNewFlightSubmit} numFlights={flights.length} />
         <FlightFilter handleFilterYearChange={handleFilterYearChange} currentYear={currentYear} />
-        {filteredFlights.map((flight, index) => (
-          <FlightCard 
-            key={index}
-            pilot={flight.pilot} 
-            craft={flight.craft} 
-            date={flight.date} 
-            notes={flight.notes} 
-          />
-        ))}
+        {filteredFlights.length 
+          ? filteredFlights.map((flight, index) => (
+            <FlightCard 
+              key={index}
+              pilot={flight.pilot} 
+              craft={flight.craft} 
+              date={flight.date} 
+              notes={flight.notes} 
+            />
+          ))
+          : <ErrorCard errorText={`No flights logged for ${filterYear}`} />
+        }
+
     </div>
   )
 }

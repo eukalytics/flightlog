@@ -48,7 +48,7 @@ export default function FlightForm({ handleNewFlightSubmit, numFlights }) {
         };
         handleNewFlightSubmit(submittedFlight)
         setNewFlight({
-            title: '',
+            pilot: '',
             craft: '',
             date: '',
             notes: '',
@@ -62,7 +62,7 @@ export default function FlightForm({ handleNewFlightSubmit, numFlights }) {
         >
             <div>
                 <label >Pilot</label>
-                <input type="text" name="pilot" value={newFlight.title} onChange={handlePilotChange} />
+                <input type="text" name="pilot" value={newFlight.pilot} onChange={handlePilotChange} />
             </div>
             <div>
                 <label>Craft</label>

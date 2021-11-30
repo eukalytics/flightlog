@@ -1,7 +1,8 @@
 import { useState } from "react";
+import BtnHideForm from "./BtnHideForm";
 import BtnSubmitForm from "./BtnSubmitForm";
 
-export default function FlightForm({ handleNewFlightSubmit, numFlights }) {
+export default function FlightForm({ handleNewFlightSubmit, numFlights, setShowForm }) {
     const [newFlight, setNewFlight] = useState({
         pilot: '',
         craft: '',
@@ -77,7 +78,10 @@ export default function FlightForm({ handleNewFlightSubmit, numFlights }) {
                 <label className="text-white block">Notes:</label>
                 <textarea name="notes" value={newFlight.notes} onChange={handleNotesChange} className="w-full"/>
             </div>
-            <BtnSubmitForm />
+            <div className="text-center">
+                <BtnSubmitForm />
+                <BtnHideForm setShowForm={setShowForm} />
+            </div>
         </form>
     )
 }

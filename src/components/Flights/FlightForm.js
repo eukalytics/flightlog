@@ -1,17 +1,18 @@
 import { useState } from "react";
 
-export default function FlightForm({ handleNewFlightSubmit }) {
+export default function FlightForm({ handleNewFlightSubmit, numFlights }) {
     const [newFlight, setNewFlight] = useState({
-        title: '',
+        pilot: '',
         craft: '',
         date: '',
         notes: '',
+        id: `f${numFlights + 1}`
     });
-    const handleTitleChange = (e) => {
+    const handlePilotChange = (e) => {
         setNewFlight((newFlight) => {
             return { 
                 ...newFlight,
-                title: e.target.value,
+                pilot: e.target.value,
             }
         });
     }
@@ -51,6 +52,7 @@ export default function FlightForm({ handleNewFlightSubmit }) {
             craft: '',
             date: '',
             notes: '',
+            id: ''
         });
     }   
     return(
@@ -60,7 +62,7 @@ export default function FlightForm({ handleNewFlightSubmit }) {
         >
             <div>
                 <label >Pilot</label>
-                <input type="text" name="pilot" value={newFlight.title} onChange={handleTitleChange} />
+                <input type="text" name="pilot" value={newFlight.title} onChange={handlePilotChange} />
             </div>
             <div>
                 <label>Craft</label>

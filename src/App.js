@@ -17,8 +17,8 @@ export default function App() {
       return [newFlightObj, ...flights];
     });
   }
-
-  const [filterYear, setFilterYear] = useState('2021');
+  const currentYear = new Date().getFullYear().toString();
+  const [filterYear, setFilterYear] = useState(currentYear);
 
   const handleFilterYearChange = (year) => {
     setFilterYear(year);
@@ -30,7 +30,8 @@ export default function App() {
         flights={flights} 
         handleAddFlight={handleAddFlight} 
         filterYear={filterYear} 
-        handleFilterYearChange={handleFilterYearChange} 
+        handleFilterYearChange={handleFilterYearChange}
+        currentYear={currentYear}
       />
     </div>
   );

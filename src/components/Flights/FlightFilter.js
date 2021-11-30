@@ -1,4 +1,4 @@
-export default function FlightFilter({handleFilterYearChange}){
+export default function FlightFilter({handleFilterYearChange, currentYear}){
 
     const handleOptionChange = (e) => {
         handleFilterYearChange(e.target.value);
@@ -6,7 +6,7 @@ export default function FlightFilter({handleFilterYearChange}){
     return (
         <div className="flex justify-between p-5">
             <label className="text-white font-semibold" >Filter By Year</label>
-            <select onChange={handleOptionChange}>
+            <select onChange={handleOptionChange} value={currentYear}>
                 <option value="2022">2022</option>
                 <option value="2021">2021</option>
                 <option value="2020">2020</option>

@@ -2,10 +2,10 @@ import { useState } from "react";
 import FlightList from "./components/Flights/FlightList";
 
 const iniitialFlights =  [ 
-  {id: "f1", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 24), notes: "Flew to the next galaxy."},
-  {id: "f2", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 23), notes: "Top secret mission."},
-  {id: "f3", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 22), notes: "Flew to the next planet."},
-  {if: "f4", pilot: "Kenny", craft: "Viper", date: new Date(2021, 11, 21), notes: "Learning how to fly."}
+  {id: "f1", pilot: "Kenny", craft: "Viper", date: new Date(2021, 10, 24), notes: "Flew to the next galaxy."},
+  {id: "f2", pilot: "Kenny", craft: "Viper", date: new Date(2021, 10, 23), notes: "Top secret mission."},
+  {id: "f3", pilot: "Kenny", craft: "Viper", date: new Date(2021, 10, 22), notes: "Flew to the next planet."},
+  {if: "f4", pilot: "Kenny", craft: "Viper", date: new Date(2021, 10, 21), notes: "Learning how to fly."}
 ];
 
 export default function App() {

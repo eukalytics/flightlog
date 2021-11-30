@@ -1,5 +1,6 @@
 import ErrorCard from "./ErrorCard"
 import FlightCard from "./FlightCard"
+import FlightDate from "./FlightDate"
 export default function FlightListContent({flights, year}) {
    
     if(!flights.length){
@@ -9,9 +10,9 @@ export default function FlightListContent({flights, year}) {
     return (
         <div>
             {
-                flights.map((flight, index) => (
+                flights.map((flight) => (
                     <FlightCard 
-                        key={index}
+                        key={flight.id}
                         pilot={flight.pilot} 
                         craft={flight.craft} 
                         date={flight.date} 

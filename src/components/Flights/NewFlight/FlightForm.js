@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddFlightBtn from "./AddFlightBtn";
 
 export default function FlightForm({ handleNewFlightSubmit, numFlights }) {
     const [newFlight, setNewFlight] = useState({
@@ -76,9 +77,7 @@ export default function FlightForm({ handleNewFlightSubmit, numFlights }) {
                 <label>Notes</label>
                 <textarea name="notes" value={newFlight.notes} onChange={handleNotesChange} />
             </div>
-            <div>
-                <button type="submit">Add Flight</button>
-            </div>
+            <AddFlightBtn />
         </form>
     )
 }

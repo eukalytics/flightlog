@@ -1,6 +1,6 @@
 import ErrorCard from "./ErrorCard"
 import FlightCard from "./FlightCard"
-import FlightDate from "./FlightDate"
+
 export default function FlightListContent({flights, year}) {
    
     if(!flights.length){

@@ -1,8 +1,8 @@
-import FlightForm from "./FlightForm";
+import FlightForm from "./NewFlight/FlightForm";
 import FlightFilter from "./FlightFilter";
 import FlightListContent from "./FlightListContent.js";
 
-export default function FlightList({flights, handleAddFlight, filterYear, handleFilterYearChange, currentYear}) {
+export default function FlightList({flights, handleAddFlight, filterYear, handleFilterYearChange}) {
 
   const handleNewFlightSubmit = (newFlightObj) => {
     const newFlight = {

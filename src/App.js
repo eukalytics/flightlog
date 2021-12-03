@@ -3,7 +3,7 @@ import FlightList from "./components/Flights/FlightList";
 
 const iniitialFlights =  [ 
   {id: "f36", pilot: "Kenny", craft: "Viper", date: new Date(2021, 10, 24), notes: "Flew to the next galaxy."},
-  {id: "f35", pilot: "Kenny", craft: "Viper", date: new Date(2021, 10, 23), notes: "Top secret mission."},
+  {id: "f35", pilot: "Kenny", craft: "Classified", date: new Date(2021, 10, 23), notes: "Top secret mission."},
   {id: "f34", pilot: "Kenny", craft: "Viper", date: new Date(2021, 10, 22), notes: "Flew to the next planet."},
   {id: "f33", pilot: "Kenny", craft: "Viper", date: new Date(2021, 10, 21), notes: "Learning how to fly."},
   {id: "f32", pilot: "Kenny", craft: "Viper", date: new Date(2021, 10, 21), notes: "Learning how to fly."},

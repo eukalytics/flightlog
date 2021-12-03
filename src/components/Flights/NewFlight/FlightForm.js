@@ -8,7 +8,7 @@ export default function FlightForm({ handleNewFlightSubmit, numFlights, setShowF
         craft: '',
         date: '',
         notes: '',
-        id: `f${numFlights + 1}`
+        id: `f${numFlights + 2}`
     });
     const handlePilotChange = (e) => {
         setNewFlight((newFlight) => {
